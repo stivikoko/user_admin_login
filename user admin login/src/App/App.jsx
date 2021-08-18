@@ -48,7 +48,8 @@ class App extends React.Component {
                         <div className="container">
                             <div className="row">
                                 <div className="col-md-6 offset-md-3">
-                                    <PrivateRoute exact path="/user" roles={[Role.User]} component={HomePage} />
+{
+                                    <PrivateRoute exact path="/" roles={[Role.Admin]} component={HomePage} />}
                                     <PrivateRoute path="/admin" roles={[Role.Admin]} component={AdminPage} />
                                     <Route path="/login" component={LoginPage} />
                                 </div>
